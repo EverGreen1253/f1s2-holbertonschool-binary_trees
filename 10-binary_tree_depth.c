@@ -3,7 +3,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - get height from specified node
+ * binary_tree_depth - get depth from specified node
  * @tree: the tree
  *
  * Return: the node
