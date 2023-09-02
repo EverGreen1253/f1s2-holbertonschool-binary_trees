@@ -3,18 +3,18 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_sibling - find node sibling
+ * binary_tree_unclde - find node uncle
  * @node: the node
  *
  * Return: pointer to node
  */
-binary_tree_t *binary_tree_sibling(binary_tree_t *node)
+binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	binary_tree_t *parent;
+	binary_tree_t *parent, *grandparent;
 	int l;
 	/* int r; */
 
-	if (node == NULL || node->parent == NULL)
+	if (node == NULL || node->parent == NULL || node->parent->parent == NULL)
 	{
 		return (NULL);
 	}
