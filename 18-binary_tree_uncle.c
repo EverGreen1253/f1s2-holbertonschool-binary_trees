@@ -10,7 +10,7 @@
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	binary_tree_t *parent, *grandparent;
+	binary_tree_t *grandparent;
 	int l;
 	/* int r; */
 
@@ -19,23 +19,23 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 		return (NULL);
 	}
 
-	parent = node->parent;
-	if (parent->left == NULL || parent->right == NULL)
+	grandparent = node->parent->parent;
+	if (grandparent->left == NULL || grandparent->right == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		l = parent->left->n;
-		/* r = parent->right->n; */
+		l = grandparent->left->n;
+		/* r = grandparent->right->n; */
 
-		if (node->n == l)
+		if (node->parent->n == l)
 		{
-			return (parent->right);
+			return (grandparent->right);
 		}
 		else
 		{
-			return (parent->left);
+			return (grandparent->left);
 		}
 	}
 
