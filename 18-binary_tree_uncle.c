@@ -3,7 +3,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_unclde - find node uncle
+ * binary_tree_uncle - find node uncle
  * @node: the node
  *
  * Return: pointer to node
